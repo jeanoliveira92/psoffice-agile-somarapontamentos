@@ -1,6 +1,6 @@
 /**
  * Function that returns a random number
- * @author Jean Oliveira
+ * @author Jean Carlos de Oliveira
  * @see {@link https://github.com/jeanoliveira92/psoffice-agile-somarapontamentos} 
 */
 
