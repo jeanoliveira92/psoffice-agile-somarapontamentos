@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Agile - Somar Apontamentos",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "backend.js"
+      ],
+      "matches": [
+        "https://pso-zenvia.jexperts.cloud/agile/agiles/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
