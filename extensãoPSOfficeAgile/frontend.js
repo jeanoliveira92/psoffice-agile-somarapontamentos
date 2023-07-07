@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             total.add(moment.duration(element))
         });
 
-        totalFormatado = moment.utc(total.asMilliseconds()).format("HH:mm");
+        totalFormatado = `${Math.trunc(total.asHours())}:${total.minutes()}`;
 
         document.querySelector('.extTotal').innerHTML = totalFormatado;
     }
@@ -27,6 +27,4 @@ document.querySelector('.container .btnClickExt').addEventListener('click', func
             chrome.tabs.sendMessage(activeTab.id, { command: "getTimes", data: [""] });
         }
     });
-
-
 });
