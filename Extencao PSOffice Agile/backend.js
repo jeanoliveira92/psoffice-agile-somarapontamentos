@@ -1,3 +1,9 @@
+/**
+ * Function that returns a random number
+ * @author Jean Oliveira
+ * @see {@link https://github.com/jeanoliveira92/psoffice-agile-somarapontamentos} 
+*/
+
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
     if (msg.command == "getTimes") {
 
