@@ -9,4 +9,4 @@ exemplo.forEach(element => {
     total.add(moment.duration(element))
 });
 
-console.log(`${Math.trunc(total.asHours())}:${total.minutes()}`)
+console.log(`${Math.trunc(total.asHours()).toString().padStart(2, '0')}:${total.minutes().toString().padStart(2, '0')}`)

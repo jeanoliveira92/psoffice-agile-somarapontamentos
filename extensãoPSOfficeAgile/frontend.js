@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             total.add(moment.duration(element))
         });
 
-        totalFormatado = `${Math.trunc(total.asHours())}:${total.minutes()}`;
+        totalFormatado = `${Math.trunc(total.asHours()).toString().padStart(2, '0')}:${total.minutes().toString().padStart(2, '0')}`;
 
         document.querySelector('.extTotal').innerHTML = totalFormatado;
     }
